@@ -1,0 +1,32 @@
+                                                        -MÉTODOS-
+
+Um método é um bloco de codigo reutilizavel que realiza uma tarefa específica.
+faz parte de uma classe e pode ser chamado para executar essa tarefa.
+Para ser chamado deretamente, deve ser estatico (método de classe). Caso nao seja estático,
+deve haver uma instância (método de instância) para chamalo.
+
+    VANTAGENS:
+
+Organizam o código.
+Permitem reutilização do código.
+Facilitam a manutençãos dos sistemas.
+
+    BOAS PRÁTICAS:
+
+Métodos devem ser curtos e realizar uma única tarefa.
+Use nomes descritivos para oos métodos.
+Evite muitos parâmetros.
+
+    EXEMPLO:
+
+public class Main {
+    public static int soma(int a, int b) { // Interface do metodo
+        return a + b; // Retorna a soma para quem chamou
+    }
+
+    public static void main(String [] args) {
+        int resultado = soma(5,3); // Chama o metodo
+            System.out.println("Resultado:" + resultado);
+    }
+}
+

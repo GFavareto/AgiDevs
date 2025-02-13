@@ -1,0 +1,47 @@
+                                        -EXEÇÕES-
+Eventos inesperados que interrompem a execução do programa.
+Exeções são objetos derivados da classe Throwable.
+
+EXEMPLOS:
+
+Falha em calculos de juros,
+formatação incorreta de valores monetários.
+
+
+COMO FUNCIONA EXEÇÕES EM JAVA:
+    O bloco try-cath-finally é uma funcionalidade que permite que o programador lide com exceções que ocorram,
+controlando o fluxo de execuções do código em situações imprevistas.
+    Caso ocorra alguma exceção dentro do bloco TRY, a execução do código será desviada para dentro do bloco
+CATCH correspondente permitindo um maior controle de fluxo do código sendo executado. Opicionalmente,
+pode ser usado o FINALLY para execução dos códigos incondicionais aos erros.
+
+SINTAXE:
+
+try{
+
+}
+catch(tipoDeExcecao nomeDaExcecao){
+    //Codigo para lidar com a exceção
+    //POdemos ter varios blocos "catch" para um mesmo "try"
+}
+finally
+    //Codigo a ser executado independentemnete de ocorrer ou não uma exceção.
+    //O finally é opcional.
+
+
+TIPOS DE EXCEÇÕES:
+
+Verificadas:
+Tratadas ou declaradas no metodo.
+
+EX: IOException, SQLExepciton, ClassNotFoundException.
+
+Nao verificadas:
+Não precisam ser declaradas com throws, mas podem ser tradas.
+
+EX: NullPonterException, ArithmeticException, ArrayIndexOutOfBoundsException, NumberFormatException,
+IllegalArgumentException.
+
+Eroor: Falhas graves que nao devem ser tradatas.
+
+
