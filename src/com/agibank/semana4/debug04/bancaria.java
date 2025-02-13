@@ -13,4 +13,27 @@
 package com.agibank.semana4.debug04;
 
 public class bancaria {
+
+    public static void main(String[] args) {
+        double[][] transacoes = {
+                {100, -50, 200, -30, 50},
+                {-100, -200, 50, 100, 150},
+                {300, -100, -50, -150, 200}
+        };
+
+        double saldoInicial = 1000.0;
+
+        for (int i = 0; i < transacoes.length; i++) {
+            double totalMovimentado = 0.0;
+            double saldoFinal = saldoInicial;
+
+            for (int j = 0; j < transacoes[i].length; j++) {
+                totalMovimentado += Math.abs(transacoes[i][j]);
+                saldoFinal += transacoes[i][j];
+            }
+            System.out.printf("Cliente %d:\n Total Movimentado = R$ %.2f \n Saldo Final = R$ %.2f\n", i + 1, totalMovimentado, saldoFinal);
+        }
+    }
 }
+
+

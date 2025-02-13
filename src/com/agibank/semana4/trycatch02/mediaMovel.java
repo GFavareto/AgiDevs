@@ -15,6 +15,22 @@
 package com.agibank.semana4.trycatch02;
 
 public class mediaMovel {
+    public static void main(String[] args) {
+        double[] precos = {100.0, 102.0, 101.0, 103.0, 105.0, 107.0, 110.0, 108.0, 109.0, 111.0};
 
+        try {
+            if (precos.length < 3) {
+                throw new IllegalArgumentException("É necessário pelo menos 3.");
+            }
 
+            System.out.println("Médias Móveis:");
+            for (int i = 0; i <= precos.length - 3; i++) {
+                double mediaMovel = (precos[i] + precos[i + 1] + precos[i + 2]) / 3;
+                System.out.printf("Média Móvel (dia %d): %.2f\n", (i + 3), mediaMovel);
+            }
+
+        } catch (IllegalArgumentException e) {
+            System.out.println("Erro: " + e.getMessage());
+        }
+    }
 }

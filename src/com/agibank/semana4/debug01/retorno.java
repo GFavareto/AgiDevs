@@ -9,4 +9,17 @@ package com.agibank.semana4.debug01;
 
 public class retorno {
 
+    public static void main(String[] args) {
+        double[] precos = {100.0, 102.0, 101.0, 103.0, 105.0};
+        double[] variacoes = new double[precos.length - 1];
+
+        for (int i = 1; i < precos.length; i++) {
+            variacoes[i - 1] = ((precos[i] - precos[i - 1]) / precos[i - 1]) * 100;
+        }
+
+        for (double variacao : variacoes) {
+            System.out.printf("%.2f ", variacao);
+        }
+    }
 }
+
